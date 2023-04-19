@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>construction 404</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="const-body">
+    
+    <figure class="const-stage">
+        <img src="lvl1-01.png" alt="LVL-1" class="lvl-1 lv" id="lv-1">
+        <img src="lvl2-01.png" alt="LVL-2" class="lvl-2 lv" id="lv-2">
+        <img src="lvl3-01.png" alt="LVL-3" class="lvl-3 lv" id="lv-3">
+        <img src="lvl4-01.png" alt="LVL-4" class="lvl-4 lv" id="lv-4">
+        <div class="crane-con">
+            <img src="./crane-top.png" class="cr-top" alt="">
+            
+            <img src="./cb-01.png" alt=""> 
+        </div>
+        
+        
+    </figure>
+    <span class="rope" id="rope"></span>
+    <div class="c404">
+        <div class="num-con m4"></div>
+        <div class="num-con m0" id="m0"></div>
+        <div class="num-con m4"></div>
+    </div>
+    <div class="btn-con">
+        <p>looks like your lost. <br> click this button to go back</p>
+        <button id="ctaBtn">back to homepage</button>
+    </div>
+    <script>
+        let m0, rope ,lv1, lv2, lv3, lv4;
+        m0 = document.getElementById('m0');
+        rope = document.getElementById('rope');
+
+        lv1 = document.getElementById('lv-1');
+        lv2 = document.getElementById('lv-2');
+        lv3 = document.getElementById('lv-3');
+        lv4 = document.getElementById('lv-4');
+        let scr_val;
+        window.addEventListener('load', function(){
+            location.href = '#m0';
+        })
+        window.addEventListener('scroll', function(){
+            scr_val = window.scrollY;
+            lv1.style.left = scr_val * 0.5 + 'px';
+            lv2.style.top = scr_val * 0.3 + 'px';
+            lv3.style.left = scr_val * -0.4 + 'px';
+            lv4.style.top = scr_val * 0.6 + 'px';
+        })
+    </script>
+</body>
+</html>
